@@ -1,13 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+// node modules imports   
+import React from 'react';  // core react library -- used for working with comp 
+import ReactDOM from 'react-dom'; // dom rendering package - browser to display
 import './index.css';
-import App from './App';
+import App from './App';  // custom imports -- App Component 
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App />
+  ,
   document.getElementById('root')
 );
 
