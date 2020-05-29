@@ -1,10 +1,14 @@
 import React from 'react';
+import './App.css';
 
 import Header from './components/shared/Header';
 import Footer from './components/shared/Footer';
 import Program from './components/Program/Program';
-import ChannelList from './components/ChannelList/ChannelList';
-import TrendingShows from './components/TrendingShows/TrendingShows';
+import ChannelList from './containers/ChannelList/ChannelList';
+import TrendingShows from './containers/TrendingShows/TrendingShows';
+import MyProfile from './containers/MyProfile/MyProfile';
+import ContactForm from './containers/ContactForm/ContactForm';
+import WithLastLogin from './hoc/WithLastLogin';
 
 // App Component  -- Setting up Layout
 function App() {
@@ -12,7 +16,7 @@ function App() {
   return (
     <div>
       <Header />
-      <div style={{marginTop: '80px'}} className="container">
+      <div className="container marginTop">
         <div className="jumbotron">
           <div className="container">
             <h1 className="display-3">Welcome to Hexa Flix App!</h1>
@@ -30,7 +34,7 @@ function App() {
         </div>
         
         {/* My Program List Comp */}
-        <h2>Featured Programs List | Props </h2>
+        <h2 className='redText'>Featured Programs List | Props </h2>
         <Program name='Man vs Mild' 
                 time='8PM' 
                 category='Adventure'>Wild travel adventure pgm</Program>
@@ -49,8 +53,23 @@ function App() {
 
         <TrendingShows></TrendingShows>
 
+        <hr/>
+        <MyProfile></MyProfile>
+
+        <hr />
+        <ContactForm></ContactForm>
+
+        <hr/>
+        <WithLastLogin>
+          <div className='alert alert-warning'>
+            Last Login: Thu 24, March 2020 | Demo of HOC
+          </div>
+        </WithLastLogin>
+        
+
       </div>
       <Footer></Footer>
+
     </div>
   );
 }

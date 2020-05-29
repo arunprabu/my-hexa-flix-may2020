@@ -8,12 +8,10 @@ const Program = (props) => {
     Props are read-only
     
   */
-  console.log(props);
 
   // Event Handler 
   // onClick, onMouseOver -- synthetic events
   const watchItHandler = ($event) => { // $event - synthetic event obj
-    console.log($event); 
     alert('clicked-- open console to see event object');
   }
 

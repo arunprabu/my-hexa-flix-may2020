@@ -1,6 +1,6 @@
 import React from 'react';
 import Menu from './Menu';
-import logo from '../../images/app-logo.png';
+import logo from '../../assets/images/app-logo.png';
 
 // Named Function comp
 function Header() {

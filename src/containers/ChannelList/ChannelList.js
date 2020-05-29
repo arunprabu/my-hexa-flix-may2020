@@ -38,8 +38,7 @@ class ChannelList extends Component {
 
   render() {
     console.log('Inside Render()');
-    console.log(this.state.channelList[0].channelName);
-    console.log(this.state.channelManager);
+
     console.log(this.props);
     return (
       <div className='text-left'>
